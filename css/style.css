@@ -1,0 +1,698 @@
+/* =========================================
+   1. Design System & CSS Variables
+   ========================================= */
+:root {
+    --bg-color: #0f0f15;
+    /* Deep dark background */
+    --second-bg-color: #1a1a24;
+    /* Slightly lighter for cards/sections */
+    --text-color: #ededed;
+    --main-color: #ff00ff;
+    /* Magenta */
+    --accent-color: #39ff14;
+    /* Neon Green */
+    --highlight-color: #0aff00;
+    /* Neon Lime */
+
+    --glow-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color);
+}
+
+/* =========================================
+   2. Base & Reset
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    /* Avoid weird horizontal scroll */
+}
+
+/* Typography Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+/* =========================================
+   3. Utilities & Effects
+   ========================================= */
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    transition: .5s ease;
+    box-shadow: 0 0 5px var(--main-color),
+        0 0 25px var(--main-color);
+}
+
+.btn:hover {
+    box-shadow: none;
+    /* Removing default glow to let hologram shine (if added) or just simple feedback */
+    background: var(--main-color);
+    /* Maintain bg */
+    transform: scale(1.05);
+}
+
+/* Holographic Effect */
+@keyframes holographic-shimmer {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.8;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        opacity: 0.8;
+    }
+}
+
+.hologram-btn {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.hologram-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600%;
+    height: 100%;
+    /* Iridescent gradient */
+    background: linear-gradient(115deg,
+            transparent 20%,
+            rgba(255, 0, 255, 0.4) 40%,
+            rgba(57, 255, 20, 0.4) 60%,
+            rgba(255, 0, 255, 0.4) 80%,
+            transparent 100%);
+    z-index: -1;
+    transform: translateX(-100%) skewX(-15deg);
+    transition: transform 0.5s;
+}
+
+.hologram-btn:hover::before {
+    transform: translateX(0) skewX(-15deg);
+    animation: customShimmer 2s infinite linear;
+}
+
+.hologram-btn:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 20px var(--main-color), 0 0 40px var(--accent-color);
+}
+
+/* =========================================
+   4. Header & Navigation
+   ========================================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgba(15, 15, 21, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.logo .dot {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+.menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}
+
+/* =========================================
+   5. Hero Section
+   ========================================= */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+    transform: translateY(-5px);
+}
+
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .glowing-circle {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--main-color), transparent 60%);
+    box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+    animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   5.5. About Section
+   ========================================= */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: var(--second-bg-color);
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img .glowing-circle-small {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--main-color), transparent 60%);
+    box-shadow: 0 0 30px var(--main-color), 0 0 60px var(--main-color);
+    animation: pulse 4s infinite alternate-reverse;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+/* =========================================
+   6. Skills Section
+   ========================================= */
+.skills {
+    background: var(--second-bg-color);
+}
+
+.skill-category-title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin: 4rem 0 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--main-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-box {
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.skill-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px var(--main-color) inset;
+    /* Interior glow */
+}
+
+.skill-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.skill-box h3 {
+    font-size: 2.6rem;
+    margin-top: 1.5rem;
+}
+
+/* =========================================
+   7. Projects Section
+   ========================================= */
+.projects {
+    background: var(--bg-color);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    height: 300px;
+    /* Fixed height for consistency */
+    border: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #111, #222);
+    /* Placeholder bg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-img::after {
+    content: 'Project Preview';
+    color: #555;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.project-box:hover .project-layer {
+    transform: translateY(0);
+}
+
+.project-layer h4 {
+    font-size: 3rem;
+    color: #fff;
+    /* Ensure text is readable on colored bg */
+    text-shadow: 0 0 5px #000;
+}
+
+.project-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+.project-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.project-layer a i {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* =========================================
+   8. Achievements / Certifications
+   ========================================= */
+.achievements {
+    background: var(--second-bg-color);
+}
+
+.achievements-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.achievement-box {
+    background: var(--bg-color);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    border: .2rem solid var(--main-color);
+    flex: 1 1 30rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.achievement-box:hover {
+    box-shadow: 0 0 20px var(--main-color);
+    background: rgba(0, 243, 255, 0.1);
+}
+
+.achievement-content .year {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.achievement-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.achievement-content p {
+    font-size: 1.4rem;
+}
+
+/* =========================================
+   9. Resume Section
+   ========================================= */
+.resume-section {
+    background: var(--bg-color);
+    text-align: center;
+}
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.resume-box h4 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/* =========================================
+   10. Contact Section
+   ========================================= */
+.contact {
+    background: var(--second-bg-color);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+    box-shadow: 0 0 5px var(--bg-color);
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* =========================================
+   11. Footer
+   ========================================= */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    border-top: 1px solid rgba(0, 243, 255, 0.1);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+}
+
+/* Helper for animations (optional) */
+section {
+    opacity: 1;
+    /* Ensure visible */
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+        /* JS will toggle this */
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-img .glowing-circle {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}

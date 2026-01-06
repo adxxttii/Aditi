@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Verma | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <a href="#" class="logo">ADITI.<span class="dot"></span></a>
+        <nav class="navbar">
+            <a href="#hero" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home" id="hero">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Aditi Verma</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Welcome to my digital universe. Crafted with code, powered by passion.</p>
+            <div class="social-media">
+                <a href="https://linkedin.com/in/aditi-verma-a88932312"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/adxxttii"><i class="fab fa-github"></i></a>
+                <!-- <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a> -->
+            </div>
+            <a href="https://drive.google.com/file/d/1oPMuBi9g0VXxqWVVlKgZE9ZIPHgBV-ti/view?usp=sharing"
+                class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <!-- Placeholder for user image or 3d graphic -->
+            <div class="glowing-circle">
+                <img src="img/ad.jpg" alt="Aditi Verma"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <div class="glowing-circle-small"></div>
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Aspiring Software Developer</h3>
+            <p>BCA 2nd-year student and aspiring software developer with hands-on experience in C, C++, Java, Python,
+                and web technologies. Passionate about building real-world projects, learning continuously, and growing
+                as a developer through practical experience.</p>
+            <a href="#contact" class="btn">Let's Talk</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <!-- Frontend -->
+        <h3 class="skill-category-title">Frontend</h3>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+            </div>
+        </div>
+
+        <!-- Backend -->
+        <h3 class="skill-category-title">Backend</h3>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-leaf"></i> <!-- Spring icon generic fallback or leaf -->
+                <h3>Spring</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <h3>MongoDB</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <h3>MySQL</h3>
+            </div>
+        </div>
+
+        <!-- Others -->
+        <h3 class="skill-category-title">Others</h3>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fas fa-code-branch"></i>
+                <h3>DSA</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="projects-container">
+            <!-- Project Cards -->
+            <div class="project-box" style="height: auto; display: flex; flex-direction: column;">
+                <div style="height: auto; flex: none;">
+                    <img src="img/food-waste-project.png" alt="Let's Donate Project"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+                <div class="project-layer"
+                    style="position: relative; transform: none; background: transparent; height: auto; padding: 2rem; align-items: flex-start; text-align: left; opacity: 1;">
+                    <h4 style="color: var(--main-color); text-shadow: none;">Let's Donate</h4>
+                    <p style="color: var(--text-color); text-shadow: none; margin-bottom: 1.5rem;">A community-driven
+                        platform dedicated to combating hunger and promoting food security. Connects donors with those
+                        in need to ensure no one goes hungry.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://food-waste-management-topaz.vercel.app/"
+                            style="background: var(--main-color); color: var(--bg-color);"><i
+                                class="fas fa-external-link-alt" style="color: inherit;"></i></a>
+                        <a href="#" style="background: var(--main-color); color: var(--bg-color);"><i
+                                class="fab fa-github" style="color: inherit;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-img">
+                    <!-- Image Placeholder -->
+                </div>
+                <div class="project-layer">
+                    <h4>Neon Design</h4>
+                    <p>A futuristic UI concept for web applications.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements / Certifications Section -->
+    <section class="achievements" id="achievements">
+        <h2 class="heading">My <span>Achievements</span></h2>
+        <div class="achievements-container">
+            <div class="achievement-box">
+                <div class="achievement-content">
+                    <div class="year"><i class="fas fa-calendar"></i> 2023</div>
+                    <h3>Certified Web Developer</h3>
+                    <p>Completed full stack certification from Top Institute.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume-section" id="resume">
+        <h2 class="heading">My <span>Resume</span></h2>
+        <div class="resume-container">
+            <div class="resume-box">
+                <h4>Experience</h4>
+                <!-- Timeline items would go here -->
+            </div>
+            <a href="https://drive.google.com/file/d/1oPMuBi9g0VXxqWVVlKgZE9ZIPHgBV-ti/view?usp=sharing"
+                class="btn hologram-btn">View Full Resume</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2026 by CodeMaster | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#hero"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
