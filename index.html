@@ -49,7 +49,7 @@
                 <!-- <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a> -->
             </div>
-            <a href="https://drive.google.com/file/d/1oPMuBi9g0VXxqWVVlKgZE9ZIPHgBV-ti/view?usp=sharing"
+            <a href="Aditi_Verma_Resume.pdf" target="_blank"
                 class="btn">Download CV</a>
         </div>
         <div class="home-img">
@@ -80,12 +80,37 @@
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
 
+        <!-- Languages -->
+        <h3 class="skill-category-title">Languages</h3>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-code"></i>
+                <h3>C++ / C</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+            </div>
+        </div>
+
         <!-- Frontend -->
         <h3 class="skill-category-title">Frontend</h3>
         <div class="skills-container">
             <div class="skill-box">
                 <i class="fab fa-react"></i>
-                <h3>React</h3>
+                <h3>React.js</h3>
             </div>
             <div class="skill-box">
                 <i class="fab fa-html5"></i>
@@ -95,26 +120,34 @@
                 <i class="fab fa-css3-alt"></i>
                 <h3>CSS3</h3>
             </div>
+            <div class="skill-box">
+                <i class="fas fa-wind" style="color: #38bdf8;"></i>
+                <h3>Tailwind CSS</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Responsive Design</h3>
+            </div>
         </div>
 
-        <!-- Backend -->
-        <h3 class="skill-category-title">Backend</h3>
+        <!-- Backend & Databases -->
+        <h3 class="skill-category-title">Backend & Databases</h3>
         <div class="skills-container">
-            <div class="skill-box">
-                <i class="fab fa-java"></i>
-                <h3>Java</h3>
-            </div>
-            <div class="skill-box">
-                <i class="fab fa-python"></i>
-                <h3>Python</h3>
-            </div>
-            <div class="skill-box">
-                <i class="fas fa-leaf"></i> <!-- Spring icon generic fallback or leaf -->
-                <h3>Spring</h3>
-            </div>
             <div class="skill-box">
                 <i class="fab fa-node-js"></i>
                 <h3>Node.js</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-server"></i>
+                <h3>Express.js</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-gears"></i>
+                <h3>REST APIs</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-leaf"></i>
+                <h3>Spring Boot</h3>
             </div>
             <div class="skill-box">
                 <i class="fas fa-database"></i>
@@ -124,22 +157,42 @@
                 <i class="fas fa-database"></i>
                 <h3>MySQL</h3>
             </div>
+            <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <h3>PostgreSQL</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <h3>Mongoose</h3>
+            </div>
         </div>
 
-        <!-- Others -->
-        <h3 class="skill-category-title">Others</h3>
+        <!-- Tools & Core Concepts -->
+        <h3 class="skill-category-title">Tools & Core Concepts</h3>
         <div class="skills-container">
             <div class="skill-box">
                 <i class="fas fa-code-branch"></i>
-                <h3>DSA</h3>
+                <h3>DSA (350+ LeetCode)</h3>
             </div>
             <div class="skill-box">
                 <i class="fab fa-git-alt"></i>
-                <h3>Git</h3>
+                <h3>Git & GitHub</h3>
             </div>
             <div class="skill-box">
-                <i class="fab fa-github"></i>
-                <h3>GitHub</h3>
+                <i class="fas fa-laptop-code"></i>
+                <h3>VS Code & Postman</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-terminal"></i>
+                <h3>PowerShell</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-cubes"></i>
+                <h3>OOP / DBMS / OS</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-figma"></i>
+                <h3>UI/UX Design</h3>
             </div>
         </div>
     </section>
@@ -148,35 +201,45 @@
     <section class="projects" id="projects">
         <h2 class="heading">Latest <span>Projects</span></h2>
         <div class="projects-container">
-            <!-- Project Cards -->
-            <div class="project-box" style="height: auto; display: flex; flex-direction: column;">
-                <div style="height: auto; flex: none;">
-                    <img src="img/food-waste-project.png" alt="Let's Donate Project"
-                        style="width: 100%; height: auto; display: block;">
+            <!-- Project 1: Autoplanner -->
+            <div class="project-box" style="height: auto; display: flex; flex-direction: column; background: var(--second-bg-color);">
+                <div style="height: 220px; overflow: hidden; position: relative;">
+                    <img src="img/autoplanner.png" alt="Autoplanner"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;">
                 </div>
                 <div class="project-layer"
-                    style="position: relative; transform: none; background: transparent; height: auto; padding: 2rem; align-items: flex-start; text-align: left; opacity: 1;">
-                    <h4 style="color: var(--main-color); text-shadow: none;">Let's Donate</h4>
-                    <p style="color: var(--text-color); text-shadow: none; margin-bottom: 1.5rem;">A community-driven
-                        platform dedicated to combating hunger and promoting food security. Connects donors with those
-                        in need to ensure no one goes hungry.</p>
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="https://food-waste-management-topaz.vercel.app/"
-                            style="background: var(--main-color); color: var(--bg-color);"><i
-                                class="fas fa-external-link-alt" style="color: inherit;"></i></a>
-                        <a href="#" style="background: var(--main-color); color: var(--bg-color);"><i
-                                class="fab fa-github" style="color: inherit;"></i></a>
+                    style="position: relative; transform: none; background: transparent; height: auto; padding: 2.5rem; align-items: flex-start; text-align: left; opacity: 1; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
+                    <div>
+                        <h4 style="color: var(--main-color); text-shadow: none; font-size: 2.2rem; font-family: 'Orbitron', sans-serif; margin-bottom: 0.5rem;">Autoplanner</h4>
+                        <span style="color: var(--accent-color); font-size: 1.3rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem; display: block;">React.js | Node.js | MongoDB</span>
+                        <p style="color: var(--text-color); text-shadow: none; font-size: 1.4rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Developed a task planning application to organize daily schedules efficiently. Implemented CRUD operations, API integration, and user-friendly UI. Improved productivity by enabling structured planning and reminders.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-top: auto;">
+                        <a href="https://github.com/adxxttii" target="_blank" style="background: var(--main-color); color: var(--bg-color); display: inline-flex; justify-content: center; align-items: center; width: 4.5rem; height: 4.5rem; border-radius: 50%; font-size: 1.8rem; transition: 0.3s;" onmouseover="this.style.boxShadow='0 0 15px var(--main-color)'" onmouseout="this.style.boxShadow='none'"><i class="fab fa-github" style="color: inherit;"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="project-box">
-                <div class="project-img">
-                    <!-- Image Placeholder -->
+
+            <!-- Project 2: MERN Stack App -->
+            <div class="project-box" style="height: auto; display: flex; flex-direction: column; background: var(--second-bg-color);">
+                <div style="height: 220px; overflow: hidden; position: relative;">
+                    <img src="img/mern_app.png" alt="MERN Stack Web Application"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;">
                 </div>
-                <div class="project-layer">
-                    <h4>Neon Design</h4>
-                    <p>A futuristic UI concept for web applications.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                <div class="project-layer"
+                    style="position: relative; transform: none; background: transparent; height: auto; padding: 2.5rem; align-items: flex-start; text-align: left; opacity: 1; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
+                    <div>
+                        <h4 style="color: var(--main-color); text-shadow: none; font-size: 2.2rem; font-family: 'Orbitron', sans-serif; margin-bottom: 0.5rem;">MERN Stack Web App</h4>
+                        <span style="color: var(--accent-color); font-size: 1.3rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem; display: block;">MongoDB | Express.js | React | Node.js</span>
+                        <p style="color: var(--text-color); text-shadow: none; font-size: 1.4rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Built a responsive web application with authentication, authorization, and dynamic database operations. Designed REST APIs and integrated frontend with backend services. Ensured smooth user experience with optimized UI.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-top: auto;">
+                        <a href="https://github.com/adxxttii" target="_blank" style="background: var(--main-color); color: var(--bg-color); display: inline-flex; justify-content: center; align-items: center; width: 4.5rem; height: 4.5rem; border-radius: 50%; font-size: 1.8rem; transition: 0.3s;" onmouseover="this.style.boxShadow='0 0 15px var(--main-color)'" onmouseout="this.style.boxShadow='none'"><i class="fab fa-github" style="color: inherit;"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,11 +263,33 @@
     <section class="resume-section" id="resume">
         <h2 class="heading">My <span>Resume</span></h2>
         <div class="resume-container">
-            <div class="resume-box">
-                <h4>Experience</h4>
-                <!-- Timeline items would go here -->
+            <div class="resume-box" style="width: 100%;">
+                <div class="timeline">
+                    <!-- Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jun 2026 - Present</div>
+                        <div class="timeline-content">
+                            <h3>SEO & Digital Marketing Intern</h3>
+                            <span class="company">Goodness of Nature | Paid Offline Internship</span>
+                            <span class="location">Kanpur Nagar, Uttar Pradesh, India</span>
+                            <p>Assisted in SEO optimization and on-page content improvements. Supported social media and digital marketing campaigns to improve online visibility. Analyzed website traffic and engagement metrics to support marketing decisions.</p>
+                        </div>
+                    </div>
+                    <!-- Education -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024 - 2027</div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Computer Applications (BCA)</h3>
+                            <span class="company">PSIT College of Higher Education</span>
+                            <span class="location">Kanpur, Uttar Pradesh, India</span>
+                            <p>Currently pursuing BCA with a focus on software development, data structures, database management systems, and full-stack web technologies. Maintain a CGPA of 7.6.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="https://drive.google.com/file/d/1oPMuBi9g0VXxqWVVlKgZE9ZIPHgBV-ti/view?usp=sharing"
+            <a href="Aditi_Verma_Resume.pdf" target="_blank"
                 class="btn hologram-btn">View Full Resume</a>
         </div>
     </section>

@@ -1,0 +1,12 @@
+{
+  "name": "aditi-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website of Aditi Verma",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
